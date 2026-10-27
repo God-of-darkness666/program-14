@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <title>Error Handling</title> 
+</head>
+<body>
+    <h2>JSON Error Handling</h2>
+    <p id="result"></p>
+    
+    <script>
+        let result = document.getElementById("result");
+        try {
+            let data = '{"name":"Rahul"}'; 
+            let student = JSON.parse(data);
+            result.innerHTML = student.name; 
+        }
+        catch (error) { 
+            result.innerHTML = "Error: Invalid JSON data"; 
+        }
+    </script>
+</body>
+</html>
